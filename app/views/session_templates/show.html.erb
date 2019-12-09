@@ -1,0 +1,109 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Session #<%= @session.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/sessions" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link session start -->
+      <div class="col">
+        <a href="/sessions/<%= @session.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit session
+        </a>
+      </div>
+      <!-- Edit link session end -->
+
+      <!-- Delete link session start -->
+      <div class="col">
+        <a href="/delete_session/<%= @session.id %>" class="btn btn-block btn-outline-secondary">
+          Delete session
+        </a>
+      </div>
+      <!-- Delete link session end -->
+    </div>
+
+    <dl>
+      <dt>
+        User
+      </dt>
+      <!-- Display user_id start -->
+      <dd>
+        <%= @session.user_id %>
+      </dd>
+      <!-- Display user_id end -->
+
+      <dt>
+        Starts at
+      </dt>
+      <!-- Display starts_at start -->
+      <dd>
+        <%= @session.starts_at %>
+      </dd>
+      <!-- Display starts_at end -->
+
+      <dt>
+        Ends at
+      </dt>
+      <!-- Display ends_at start -->
+      <dd>
+        <%= @session.ends_at %>
+      </dd>
+      <!-- Display ends_at end -->
+
+      <dt>
+        Message sent
+      </dt>
+      <!-- Display message_sent start -->
+      <dd>
+        <%= @session.message_sent %>
+      </dd>
+      <!-- Display message_sent end -->
+
+      <dt>
+        Professor
+      </dt>
+      <!-- Display professor start -->
+      <dd>
+        <%= @session.professor %>
+      </dd>
+      <!-- Display professor end -->
+
+      <dt>
+        Location
+      </dt>
+      <!-- Display location start -->
+      <dd>
+        <%= @session.location %>
+      </dd>
+      <!-- Display location end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@session.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@session.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
