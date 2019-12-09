@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "sessions#index"
   # Routes for the Session resource:
 
   # CREATE
