@@ -1,4 +1,6 @@
 ActiveAdmin.register Session do
+
+ permit_params :user_id, :starts_at, :ends_at, :message_sent, :professor, :location
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
