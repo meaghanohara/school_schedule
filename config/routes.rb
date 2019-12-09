@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_session/:id_to_remove", { :controller => "sessions", :action => "destroy_row" })
+  get("/delete_session_from_user/:id_to_remove", { :controller => "sessions", :action => "destroy_row_from_user" })
 
   #------------------------------
 
