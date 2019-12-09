@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "session_templates/sessions_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -70,13 +66,10 @@
 
       <% @sessions.each do |session| %>
       <tr>
-        <!-- Display session.id start -->
         <td>
           <%= session.id %>
         </td>
-        <!-- Display session.id end -->
 
-        <!-- Display session.user_id start -->
         <td>
           <% if session.user.present? %>
             <a href="/users/<%= session.user.id %>">
@@ -84,49 +77,34 @@
             </a>
           <% end %>
         </td>
-        <!-- Display session.user_id end -->
 
-        <!-- Display session.starts_at start -->
         <td>
           <%= session.starts_at %>
         </td>
-        <!-- Display session.starts_at end -->
 
-        <!-- Display session.ends_at start -->
         <td>
           <%= session.ends_at %>
         </td>
-        <!-- Display session.ends_at end -->
 
-        <!-- Display session.message_sent start -->
         <td>
           <%= session.message_sent %>
         </td>
-        <!-- Display session.message_sent end -->
 
-        <!-- Display session.professor start -->
         <td>
           <%= session.professor %>
         </td>
-        <!-- Display session.professor end -->
 
-        <!-- Display session.location start -->
         <td>
           <%= session.location %>
         </td>
-        <!-- Display session.location end -->
 
-        <!-- Display session.created_at start -->
         <td>
           <%= time_ago_in_words(session.created_at) %> ago
         </td>
-        <!-- Display session.created_at end -->
 
-        <!-- Display session.updated_at start -->
         <td>
           <%= time_ago_in_words(session.updated_at) %> ago
         </td>
-        <!-- Display session.updated_at end -->
 
         <td>
           <a href="/sessions/<%= session.id %>">
