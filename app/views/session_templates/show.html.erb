@@ -13,17 +13,21 @@
 
       <!-- Edit link session start -->
       <div class="col">
-        <a href="/sessions/<%= @session.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit session
-        </a>
+        <% if current_user == @session.user %>
+          <a href="/sessions/<%= @session.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit session
+          </a>
+        <% end %>
       </div>
       <!-- Edit link session end -->
 
       <!-- Delete link session start -->
       <div class="col">
-        <a href="/delete_session/<%= @session.id %>" class="btn btn-block btn-outline-secondary">
-          Delete session
-        </a>
+        <% if current_user == @session.user %>
+          <a href="/delete_session/<%= @session.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete session
+          </a>
+        <% end %>
       </div>
       <!-- Delete link session end -->
     </div>
