@@ -45,7 +45,7 @@ class SessionsController < ApplicationController
   def update_row
     @session = Session.find(params.fetch("id_to_modify"))
 
-    @session.user_id = params.fetch("user_id")
+    
     @session.starts_at = params.fetch("starts_at")
     @session.ends_at = params.fetch("ends_at")
     @session.message_sent = params.fetch("message_sent")
